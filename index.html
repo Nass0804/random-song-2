@@ -6,19 +6,22 @@
     <title>Random Sound</title>
     <script>
         const sounds = [
-            "https://www.youtube.com/watch?v=RxRn4jHytJk",
-            "https://www.youtube.com/watch?v=nRd8uPUQpno",
-            "https://www.youtube.com/watch?v=C5dGUqqwkq0"
+            "RxRn4jHytJk",
+            "nRd8uPUQpno",
+            "C5dGUqqwkq0"
         ];
 
-        // Redirection vers un son aléatoire
         window.onload = () => {
             const randomIndex = Math.floor(Math.random() * sounds.length);
-            window.location.href = sounds[randomIndex];
+            const iframe = document.getElementById("youtubePlayer");
+            iframe.src = `https://www.youtube.com/embed/${sounds[randomIndex]}?autoplay=1`;
         };
     </script>
 </head>
 <body>
-    <p>Redirecting to a random sound...</p>
+    <h1>Random Sound Player</h1>
+    <iframe id="youtubePlayer" width="560" height="315" 
+        src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
 </body>
 </html>
