@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sound</title>
+    <script>
+        const sounds = [
+            "https://www.youtube.com/watch?v=RxRn4jHytJk",
+            "https://www.youtube.com/watch?v=nRd8uPUQpno",
+            "https://www.youtube.com/watch?v=C5dGUqqwkq0"
+        ];
+
+        // Redirection vers un son aléatoire
+        window.onload = () => {
+            const randomIndex = Math.floor(Math.random() * sounds.length);
+            window.location.href = sounds[randomIndex];
+        };
+    </script>
+</head>
+<body>
+    <p>Redirecting to a random sound...</p>
+</body>
+</html>
